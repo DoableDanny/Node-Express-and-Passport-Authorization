@@ -5,6 +5,7 @@
 ## Scripts
 
 npm start (deployment)
+
 npm run dev (development with nodemon)
 
 ## ejs Templating Engine
