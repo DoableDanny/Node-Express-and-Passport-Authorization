@@ -60,7 +60,6 @@ router.post('/register', (req, res) => {
           name,
           email,
           password,
-          password2,
         });
 
         // Hash Password
@@ -93,6 +92,7 @@ router.post('/login', (req, res, next) => {
 
 // Logout Handle
 router.get('/logout', (req, res) => {
+  // logout function provided by passport
   req.logout();
   req.flash('success_msg', 'You are logged out');
   res.redirect('/users/login');
