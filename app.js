@@ -44,7 +44,7 @@ app.use(passport.session());
 // Connect flash
 app.use(flash());
 
-// Global vars
+// Global vars (e.g. res.locals.success_msg will be available in ejs template as success_msg)
 app.use((req, res, next) => {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');

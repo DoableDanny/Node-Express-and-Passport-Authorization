@@ -31,6 +31,7 @@ module.exports = function (passport) {
     })
   );
 
+  // Stores a cookie on client with user.id so don't need to send all credentials between requests.
   passport.serializeUser((user, done) => {
     done(null, user.id);
   });
